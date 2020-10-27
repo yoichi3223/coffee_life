@@ -66,10 +66,11 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'kaminari','~> 1.2.1'
-gem 'bootstrap-sass', '~> 3.3.6'
-gem "jquery-rails"
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
 gem 'enum_help'
 gem 'rails-i18n'
+gem 'devise-i18n-views'
 gem 'font-awesome-sass', '~> 5.4.1'
 gem "toastr-rails"
 gem 'jp_prefecture'
