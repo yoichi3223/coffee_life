@@ -1,0 +1,23 @@
+header {
+  height: 100px;
+  background-color: burlywood;
+  font-family: 'Quicksand';
+}
+
+.header-logo {
+  font-size: 40px;
+  padding: 20px 80px;
+  display: inline-block;
+  float: left;
+}
+
+.header-list {
+  padding: 20px 100px;
+  float: left;
+}
+
+.header-list li {
+  float: left;
+  list-style: none;
+  margin-right: 60px;
+}

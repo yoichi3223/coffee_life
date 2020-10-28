@@ -7,9 +7,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   </head>
-
   <body>
+
+  <% if user_signed_in? %>
+      <%= render 'layouts/after_login'%>
+  <% end %>
     <%= yield %>
   </body>
 </html>
