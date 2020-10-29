@@ -1,0 +1,26 @@
+      <div class ="container">
+   <div class = "row">
+<div class ="col-lg-6">
+
+<div class = "user_box clearfix">
+<div class ="user_image">
+<h3><i class="fas fa-coffee"></i>ユーザー情報</h3>
+<%= attachment_image_tag @user, :image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg", size:'200x200' %>
+<label><%= @user.name%>さん</label>
+</div>
+<div class ="user_text">
+<h3><i class="fas fa-coffee"></i>コーヒーへの情熱</h3>
+<h6><%= @user.introduction%></h6>
+</div>
+<div class ="user_edit_button">
+<%= link_to "Edit", edit_user_path(@user),class:"user-button btn btn-primary btn-lg"%> 
+</div>
+</div>
+
+
+
+
+
+</div>
+  </div>
+      </div>

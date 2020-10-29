@@ -1,3 +1,81 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user_box {
+  background-color: rgb(243, 236, 227);
+  height: 650px;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-radius: 7px;
+
+}
+
+.user_image {
+  background-color: #fff;
+  margin: 0 20px;
+  padding-top: 5px;
+  padding-left: 80px;
+  border-radius: 7px;
+}
+
+.user_image h3 {
+  text-align: center;
+  width: 300px;
+  background-color: burlywood;
+  border-radius: 11px;
+  padding-top: 10px;
+
+}
+
+.user_image label {
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+.user_text {
+  background-color: #fff;
+  height: 300px;
+  margin: 10px 20px;
+  padding-top: 5px;
+  padding-left: 80px;
+  padding-right: 80px;
+  border-radius: 7px;
+}
+
+.user_text h3 {
+  text-align: center;
+  width: 350px;
+  background-color: burlywood;
+  border-radius: 11px;
+  padding-top: 10px;
+
+}
+
+.user_text h6 {
+  word-wrap: break-word;
+}
+
+.user_edit_button {
+  padding-left: 120px;
+}
+
+.user-button {
+  width: 300px;
+}
+
+//editpage
+
+.edit_user {
+  background-color: skyblue;
+  padding: 50px 0;
+}
+
+.user_edit_list {
+  width: 700px;
+  padding-left: 450px;
+
+}
+
+.btn-edit-user {
+  width: 250px;
+}
