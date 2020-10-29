@@ -5,7 +5,7 @@
 <div class = "user_box clearfix">
 <div class ="user_image">
 <h3><i class="fas fa-coffee"></i>ユーザー情報</h3>
-<%= attachment_image_tag @user, :image, :fill, 60, 60, format: 'jpeg', fallback: "no_image.jpg", size:'200x200' %>
+<%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpg", size:'150x150' %>
 <label><%= @user.name%>さん</label>
 </div>
 <div class ="user_text">

@@ -1,9 +1,11 @@
 <div class ="container edit_user" >
 <div class ="row" >
 
-<%= form_with model: @user do |f| %>
+<%= form_with model: @user do |f| %>  
 <div class ="user_edit_list">
 <h3>User Edit</h3>
+  <%= f.label :image, 'プロフィールイメージ' %><br>
+  <%= f.attachment_field :image %>
   <%= f.label :name, '名前' %><br>
   <%= f.text_field :name,class:"form-control" %>
   </div>
