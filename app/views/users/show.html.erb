@@ -12,15 +12,12 @@
 <h3><i class="fas fa-coffee"></i>コーヒーへの情熱</h3>
 <h6><%= @user.introduction%></h6>
 </div>
+<%if @user.id == current_user.id%>
 <div class ="user_edit_button">
 <%= link_to "Edit", edit_user_path(@user),class:"user-button btn btn-primary btn-lg"%> 
 </div>
+<% end %>
 </div>
-
-
-
-
-
 </div>
   </div>
       </div>
