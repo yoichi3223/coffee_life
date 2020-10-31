@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_29_052121) do
+ActiveRecord::Schema.define(version: 2020_10_31_051728) do
+
+  create_table "chains", force: :cascade do |t|
+    t.string "title", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "drinks", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "text", limit: 300
+    t.string "image_id"
+    t.integer "user_id", null: false
+    t.integer "chain_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chain_id"], name: "index_drinks_on_chain_id"
+    t.index ["user_id"], name: "index_drinks_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

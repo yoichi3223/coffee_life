@@ -1,0 +1,24 @@
+// Place all the styles related to the drinks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.drink-box {
+  margin-top: 30px;
+  margin-left: 150px;
+  padding-top: 30px;
+  height: 600px;
+  background-color: skyblue;
+  width: 700px;
+}
+
+.drink-form {
+  padding: 0 30px;
+
+}
+
+.title-form {
+  width: 300px;
+}
+
+.drink-label {
+  font-weight: bold;
+}

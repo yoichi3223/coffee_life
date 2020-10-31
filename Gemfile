@@ -75,3 +75,4 @@ gem 'font-awesome-sass', '~> 5.4.1'
 gem "toastr-rails"
 gem 'jp_prefecture'
 gem 'pry-rails'
+gem 'pry-nav' 

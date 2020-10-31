@@ -1,0 +1,39 @@
+             <div class = "container">
+          <div class = "row">
+       <div class = "col-lg-12">
+   <div class = "drink-box">
+<%= form_with model: drink do |f| %>
+  <div class = "drink-form">
+    <h3>Drink New</h3>
+    <%= f.label :image, 'コーヒーイメージ',class:"drink-label" %><br>
+    <%= f.attachment_field :image %>
+  </div>
+
+  <div class = "drink-form">
+    <%= f.label :title, 'タイトル',class:"drink-label" %><br>
+    <%= f.text_field :title,class:"form-control title-form" %>
+  </div>
+
+  <div class = "drink-form">
+    <%= f.label :text, 'テキスト',class:"drink-label" %><br>
+    <%= f.text_area :text,class:"form-control form" %>
+  </div>
+
+  <div class = "drink-form">
+    <%= f.label :chain, 'チェーン名',class:"drink-label" %><br>
+    <%= f.collection_select :chain_id, Chain.all,:id, :title, include_blank: "チェーン名を選択してください"%></div>
+    <br>
+  <div class = "drink-form">
+    <%= f.submit "送信",class:"btn-edit-user btn btn-primary btn-lg" %>
+    <% end %>		
+ </div>
+   </div>
+      </div>			
+         </div>		
+            </div>				
+				
+				
+				
+				
+				
+				
