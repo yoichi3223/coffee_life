@@ -14,13 +14,24 @@
 <%= link_to "削除",drink_path(@drink),method: :delete%>
 <%= link_to "編集",edit_drink_path(@drink) %>
 <% end %>
-
-
-
-
-
-
 </div> 
+
+<%= form_with(model:[@drink,@comment],local: true) do |f| %>
+  <div class = "drink-comment-form">
+    <h3>コメント</h3>
+    <%= f.label :text, 'コメント',class:"drink-label" %><br>
+    <%= f.text_area :text,class:"form-control" %>
+  </div>
+
+    <br>
+  <div class = "drink-comment-form">
+    <%= f.submit "送信",class:"btn-edit-user btn btn-primary btn-lg" %>
+    <% end %>		
+
+
+
+
+
     </div> 
         </div>
            </div>
