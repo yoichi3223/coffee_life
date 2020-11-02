@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .user_box {
   background-color: rgb(243, 236, 227);
-  height: 650px;
-  padding-top: 20px;
+
+  padding: 20px 0;
   margin-top: 20px;
   border-radius: 7px;
 
@@ -34,7 +34,7 @@
 
 .user_text {
   background-color: #fff;
-  height: 300px;
+
   margin: 10px 20px;
   padding-top: 5px;
   padding-left: 80px;
@@ -78,4 +78,26 @@
 
 .btn-edit-user {
   width: 250px;
+}
+
+
+//user.drink
+
+.user_drink {
+  background-color: rgb(243, 236, 227);
+
+  padding: 20px 0;
+  margin-top: 20px;
+  border-radius: 7px;
+}
+
+.user_drink_list {
+  padding-left: 125px;
+}
+
+.user_drink_list p {
+  background-color: white;
+  width: 300px;
+  border-radius: 3px;
+  word-wrap: break-word;
 }

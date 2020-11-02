@@ -1,0 +1,27 @@
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">投稿イメージ</th>
+      <th scope="col">投稿タイトル</th>
+      <th scope="col">投稿内容</th>
+      <th scope="col">チェーン名</th>
+      <th scope="col">あなたの投稿</th>
+      <th scope="col">show</th>
+    </tr>
+  </thead>
+    <% @drinks.each do |drink| %>
+  <tbody>
+    <tr>
+      <td><%= drink.id%></td>
+      <td><%= attachment_image_tag drink, :image, format: 'jpeg', fallback: "no_coffee.jpg", size:'50x50' %></td>
+      <td><%= drink.title%></td>
+      <td><%= drink.text%></td>
+      <td><%= drink.chain.title%></td>
+      <td><h3><%= drink_index(drink)%></h3></td>
+      <td><%= link_to "Show",drink_path(drink)%></td>
+    </tr>
+  </tbody>
+  <% end %>
+  <%= paginate @drinks %>
+</table>

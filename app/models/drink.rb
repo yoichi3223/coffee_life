@@ -1,5 +1,5 @@
 class Drink < ApplicationRecord
+  belongs_to :chain
   belongs_to :user
   attachment :image
-  has_many :chains,dependent: :destroy
 end

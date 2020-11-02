@@ -1,0 +1,31 @@
+// paginate
+.pagination {
+  width: 700px;
+  position: absolute;
+  top: 750px;
+  left: 550px;
+}
+
+.pagination span {
+  background-color: skyblue;
+  text-align: center;
+  width: 50px;
+  border: solid 1px #344963;
+  color: #000;
+  background-color: skyblue;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.pagination span:hover {
+  transition: .3s;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.pagination span a:hover {
+  transition: .3s;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

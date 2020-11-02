@@ -7,6 +7,7 @@
 <h3><i class="fas fa-coffee"></i>ユーザー情報</h3>
 <%= attachment_image_tag @user, :image, format: 'jpeg', fallback: "no_image.jpg", size:'150x150' %>
 <label><%= @user.name%>さん</label>
+<label style= "color:blue;">これまでの投稿は<%= @user.drinks.count%>件です</label>
 </div>
 <div class ="user_text">
 <h3><i class="fas fa-coffee"></i>コーヒーへの情熱</h3>
@@ -18,6 +19,49 @@
 </div>
 <% end %>
 </div>
+   </div>
+
+  
+   <div class ="col-lg-6">
+     <% @drinks.each do|drink|%>
+<div class = "user_drink">
+
+<div class = "user_drink_list">
+<%= attachment_image_tag drink, :image, format: 'jpeg', fallback: "no_image.jpg", size:'250x250' %>
 </div>
+
+<div class = "user_drink_list">
+<h5>投稿タイトル</h5>
+<p><%=drink.title %></p>
+
+
+</div>
+
+<div class = "user_drink_list">
+<h5>投稿テキスト</h5>
+<p><%=drink.text %></p>
+</div>
+
+<div class = "user_drink_list">
+<h5>チェーン名</h5>
+<p><%=drink.chain.title %></p>
+</div>
+<div class = "user_drink_list">
+<h5>投稿日</h5>
+<p><%=drink.created_at.strftime('%Y/%m/%d')  %></p>
+</div>
+<div class = "user_drink_list">
+<p><%= link_to "show",drink_path(drink)  %></p>
+</div>
+
+
+
+
+</div>
+<% end %>
+</div>
+
+</div>
+
   </div>
       </div>

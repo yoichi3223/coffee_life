@@ -1,0 +1,26 @@
+            <div class ="container">
+       <div class ="row">
+    <div class = "col-lg-12">
+<div class ="drink-show">
+<h5>今日のコーヒー</h5>
+<p><%= attachment_image_tag @drink, :image, format: 'jpeg', fallback: "no_image.jpg", size:'150x150' %></p>
+<h5>タイトル</h5>
+<p><%= @drink.title%></p>
+<h5>テキスト</h5>
+<p><%= @drink.text%></p>
+<h5>チェーン名</h5>
+<p><%= @drink.chain.title%></p>
+<%if @drink.user == current_user %>
+<%= link_to "削除",drink_path(@drink),method: :delete%>
+<%= link_to "編集",edit_drink_path(@drink) %>
+<% end %>
+
+
+
+
+
+
+</div> 
+    </div> 
+        </div>
+           </div>

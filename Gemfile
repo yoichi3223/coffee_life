@@ -76,3 +76,4 @@ gem "toastr-rails"
 gem 'jp_prefecture'
 gem 'pry-rails'
 gem 'pry-nav' 
+gem 'kaminari','~> 1.2.1'

@@ -1,3 +1,3 @@
 class Chain < ApplicationRecord
-  belongs_to :drink
+has_many :drinks
 end
