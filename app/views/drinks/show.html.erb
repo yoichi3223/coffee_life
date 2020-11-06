@@ -16,10 +16,9 @@
 <% end %>
 </div> 
 
-<%# <div id="#favorirites_buttons_<%= @drink.id %>
-<%= render partial: 'drinks/like', locals: { drink: @drink}%>
-<%# </div> %>
-
+<div id="favorite_buttons_<%= @drink.id %>">
+<%= render partial: 'favorites/favorite',locals:{ drink: @drink,favorites: @favorite} %>
+</div>
 
 
 <%= form_with(model:[@drink,@comment],local: true) do |f| %>

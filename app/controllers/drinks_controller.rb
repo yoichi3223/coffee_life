@@ -21,6 +21,7 @@ end
   def show 
     @drink = Drink.find(params[:id])
     @comment = Comment.new
+    @favorite = Favorite.new
   end
 
   def edit
