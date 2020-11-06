@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#show'
+  root 'users#index'
   devise_for :users
   resources :users, only: [:index, :show, :edit, :update]
   resources :drinks do

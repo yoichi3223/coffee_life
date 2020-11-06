@@ -1,0 +1,17 @@
+<div class = "favorite-area">
+ <% if drink.favorited_by?(current_user)%>
+ <li>
+  <%= link_to drink_favorites_path(drink), method: :delete,remote: true do %>
+    <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
+    <%= drink.favorites.count %> いいね
+  <% end %>
+</li>
+<% else %>
+<li>
+  <%= link_to drink_favorites_path(drink), method: :post,remote: true do %>
+    <i class="fa fa-heart" aria-hidden="true"></i>
+    <%= drink.favorites.count %> いいね
+  <% end %>
+</li>
+<% end %>
+</div>
