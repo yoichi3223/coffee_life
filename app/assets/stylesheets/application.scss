@@ -45,6 +45,9 @@ footer span {
   line-height: 100px;
   text-align: center;
   display: block;
+}
 
-
+footer span:hover {
+  color: lightgreen;
+  font-size: 30px;
 }

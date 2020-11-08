@@ -10,7 +10,6 @@ class FavoritesController < ApplicationController
   # end
 # //Ajax
     def create
-      binding.pry
   	@drink = Drink.find(params[:drink_id])
   	@favorite = Favorite.new
   	@favorite.user_id = current_user.id

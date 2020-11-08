@@ -15,8 +15,10 @@
       <%= render 'layouts/after_login'%>
   <% end %>
     <%= yield %>
+     <% if user_signed_in? %>
     <footer>
     <span>Product by Yoichi Hashimoto</span>
     </footer>
+    <% end %>
   </body>
 </html>
