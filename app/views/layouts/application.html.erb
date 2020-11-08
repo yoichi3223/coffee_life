@@ -6,11 +6,12 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag '/app/assets/js.cookie.js' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    
   </head>
   <body>
-
   <% if user_signed_in? %>
       <%= render 'layouts/after_login'%>
   <% end %>
@@ -20,5 +21,29 @@
     <span>Product by Yoichi Hashimoto</span>
     </footer>
     <% end %>
+    <div id = "privacy-panel">
+    <p>当サイトではユーザーエクスペリエンス向上のためクッキーを使用しています。</p>
+    <button id = "agreebtn">承認する</button>
+    </div>
+    <script>
+    'use strict'
+const agree = Cookies.get("cookie-agree");
+const panel = document.getElementById("privacy-panel");
+if(agree === "yes"){
+  console.log("クッキーを確認しました");
+  document.body.removeChild(panel);
+}else{
+  console.log("クッキーを確認できません");
+  document.getElementById("agreebtn").onclick = function(){
+    Cookies.set("cookie-agree","yes",{expires:7});
+    document.body.removeChild(panel);
+  };
+}
+document.getElementById("testbtn").onclick = function(){
+  Cookies.remove("cookie-agree");
+};
+
+    </script>
+ 
   </body>
 </html>
