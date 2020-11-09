@@ -1,3 +1,12 @@
+<div class = "search">
+<h5>投稿検索</h5>
+<%= form_tag(drinks_path,method: 'get')do%>
+<%= label_tag(:drink_key, '検索はこちらから:') %>
+<%= text_field_tag(:drink_key) %>
+<%= submit_tag 'Search',class:"btn btn-primary" %> 
+<% end %>
+</div>
+
 <table class="table table-hover">
   <thead class="thead-dark">
     <tr>
@@ -23,5 +32,5 @@
     </tr>
   </tbody>
   <% end %>
-  <%= paginate @drinks %>
+  <%# <%= paginate @drinks %> 
 </table>

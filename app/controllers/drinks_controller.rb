@@ -1,7 +1,13 @@
 class DrinksController < ApplicationController
 
   def index
+    # binding.pry
+    if params[:drink_key]
+    @drinks = Drink.where('title LIKE ?', "%#{params[:drink_key]}%")
+    @drinks = Drink.where('text LIKE ?', "%#{params[:drink_key]}%")
+    else
     @drinks = Drink.page(params[:page]).reverse_order
+    end
   end
 
   def new 

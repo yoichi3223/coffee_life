@@ -60,7 +60,7 @@ footer span:hover {
   left: 0;
   right: 0;
   bottom: 0;
-
+  height: 100px;
   padding: 20px 60px 20px 60px;
   background: rgba(0, 0, 0, 0.75);
 
@@ -71,7 +71,7 @@ footer span:hover {
 #privacy-panel p {
   flex: 1 1 auto;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #ddd;
 }
 
